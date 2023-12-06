@@ -40,6 +40,7 @@ function App() {
       <div className={style.modal}>
         <p className={style.tt}>Hello style</p>
       </div>
+      <div id="container" />
       <Modal
         className={style.only}
         title="Basic Modal"

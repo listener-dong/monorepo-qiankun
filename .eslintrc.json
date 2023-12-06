@@ -9,7 +9,8 @@
     "plugin:vue/vue3-essential",
     "plugin:@typescript-eslint/recommended",
     "prettier",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "plugin:react/recommended"
   ],
   "parser": "vue-eslint-parser",
   "parserOptions": {
@@ -17,13 +18,43 @@
     "parser": "@typescript-eslint/parser",
     "sourceType": "module"
   },
-  "plugins": ["vue", "@typescript-eslint"],
+  "plugins": ["vue", "react", "@typescript-eslint"],
+  "settings": {
+    "react": {
+      // 指定当前项目 react 版本，detect 自动识别
+      "version": "18.2.0"
+    }
+  },
   "rules": {
+    // 标签完整，禁止标签换行
     "vue/html-closing-bracket-newline": [
       "error",
       {
         "singleline": "never",
         "multiline": "never"
+      }
+    ],
+    // React 17 或更高版本，不再需要显式引入 React，默认支持 JSX 转换
+    "react/react-in-jsx-scope": "off",
+    // vue 标签内没有内容使用单标签
+    "vue/html-self-closing": [
+      "error",
+      {
+        "html": {
+          "void": "always",
+          "normal": "always",
+          "component": "always"
+        },
+        "svg": "always",
+        "math": "always"
+      }
+    ],
+    // react 标签内没有内容使用单标签
+    "react/self-closing-comp": [
+      "error",
+      {
+        "component": true,
+        "html": true
       }
     ]
   }
