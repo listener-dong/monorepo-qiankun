@@ -56,6 +56,10 @@
         "component": true,
         "html": true
       }
-    ]
+    ],
+    // 不会被修改的变量声明为 const
+    "prefer-const": "warn",
+    // 禁止使用 var 进行变量声明
+    "no-var": "warn"
   }
 }
