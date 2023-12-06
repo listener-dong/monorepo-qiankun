@@ -4,7 +4,6 @@
     "es2021": true,
     "node": true
   },
-  "cache": false,
   "extends": [
     "eslint:recommended",
     "plugin:vue/vue3-essential",
@@ -19,5 +18,13 @@
     "sourceType": "module"
   },
   "plugins": ["vue", "@typescript-eslint"],
-  "rules": {}
+  "rules": {
+    "vue/html-closing-bracket-newline": [
+      "error",
+      {
+        "singleline": "never",
+        "multiline": "never"
+      }
+    ]
+  }
 }
