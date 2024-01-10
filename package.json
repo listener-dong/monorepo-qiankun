@@ -9,7 +9,11 @@
     "lint:eslint": "eslint --ext .ts,.tsx,.jsx,.js,.vue --fix --quiet ./packages",
     "lint:prettier": "prettier --write  \"packages/**/**/*.{js,ts,json,tsx,css,scss,vue,html,md}\"",
     "lint": "pnpm lint:eslint && pnpm lint:prettier && pnpm lint:stylelint",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "dev:main": "cd packages/main && pnpm run dev",
+    "dev:one": "cd packages/child_one && pnpm run dev",
+    "dev:sub_react": "cd packages/subApp_react && pnpm run dev",
+    "dev:all": "pnpm dev:sub_react & pnpm dev:one & pnpm dev:main"
   },
   "keywords": [],
   "author": "",

@@ -26,7 +26,7 @@ export default defineConfig({
       generateScopedName: '[name]__[local]___[hash:base64:5]',
       hashPrefix: 'prefix'
     },
-    //* 预编译支持less
+    //* 预编译支持sass
     preprocessorOptions: {
       scss: {
         // 支持内联 JavaScript
